@@ -4,7 +4,8 @@
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
-
+import Head from 'next/head';
+import '../styles/globals.css';
 import type { AppProps } from "next/app";
 
 // Import the connectorsForWallets function to create a list of wallets to connect to. 
@@ -69,14 +70,46 @@ const wagmiClient = createClient({
 // Create and export the App component wrapped with the RainbowKitProvider and WagmiConfig.
 function App({ Component, pageProps }: AppProps) {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains} coolMode={true}>
-        <ToastContainer position={'bottom-center'} />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </RainbowKitProvider>
-    </WagmiConfig>
+    
+    <><Head>
+      <title>Sneaker punk - NFT Marketplace</title>
+      <meta name='title' content='Sneakerpunk - NFT Marketplace' />
+      <meta name='description' content='Buy & sale nft online' />
+      <meta name='keywords' content='nft, marketplace' />
+      <meta name='robots' content='index, follow' />
+      <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
+      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content={process.env.NEXT_PUBLIC_MAIN_URL} />
+      <meta property='og:title' content='Sneakerpunk - NFT Marketplace' />
+      <meta property='og:description' content='Buy & sale nft online' />
+      <meta
+        property='og:image'
+        content={process.env.NEXT_PUBLIC_MAIN_URL + 'logo.png'} />
+
+      <meta property='og:locale' content='id' />
+      <meta property='og:image:alt' content='logo' />
+      <meta property='og:image:type' content='png' />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
+      <meta property='twitter:card' content='summary_large_image' />
+      <meta
+        property='twitter:url'
+        content={process.env.NEXT_PUBLIC_MAIN_URL} />
+      <meta property='twitter:title' content='SneakerPunk - NFT Marketplace' />
+      <meta property='twitter:description' content='Buy & sale nft online' />
+      <meta
+        property='twitter:image'
+        content={process.env.NEXT_PUBLIC_MAIN_URL + 'logo.png'} />
+      <link rel='shortcut icon' href='/favicon.svg' type='image/x-icon' />
+    </Head><WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains} coolMode={true}>
+          <ToastContainer position={'bottom-center'} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </RainbowKitProvider>
+      </WagmiConfig></>
   )
 }
 

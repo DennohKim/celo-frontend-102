@@ -1,49 +1,109 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import { Container, Logo } from '.';
 
-type Props = {
-    className?: string
-}
-
-const navigation = [
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com/CeloDevs',
-      icon: (props: Props) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-        </svg>
-      ),
-    },
-    {
-      name: 'GitHub',
-      href: 'https://github.com/celo-org/celo-composer',
-      icon: (props: Props) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
-    }
-  ]
-  
-  export default function Footer() {
-    return (
-      <footer className="bg-gypsum mt-auto border-black border-t">
-        <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
-          <div className="flex justify-center space-x-6 md:order-2">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-black hover:text-forest" target="_blank" rel="noopener noreferrer">
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
+const Footer = () => {
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  return (
+    <Container className={'pb-10'}>
+      <div className='flex flex-col lg:flex-row mb-16'>
+        <div className='w-[300px] mb-10 lg:mb-0 mr-10 lg:mr-28'>
+          <Logo />
+          <p className='mt-5'>
+            The best NFT marketplace platform in the world.Buy,Sell and Mint 
+            your NFT.
+          </p>
+        </div>
+        <div className='flex-1 grid grid-cols-2 md:grid-cols-3 gap-4'>
+          <div>
+            <p className='font-bold text-xl mb-5'>About</p>
+            <div className='flex flex-col'>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>Product</a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'></a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>Term & Condition</a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>FAQ</a>
+              </Link>
+            </div>Collabos
           </div>
-          <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-base text-black">&copy; {new Date().getFullYear()} Developed with 🖤 by the Celo DevRel team.</p>
+          <div>
+            <p className='font-bold text-xl mb-5'>Company</p>
+            <div className='flex flex-col'>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>Our Team</a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>Partner With Us</a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>Privacy & Policy</a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>Features</a>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <p className='font-bold text-xl mb-5'>Contact</p>
+            <div className='flex flex-col'>
+              <Link href='/'>
+                <a className='mb-4 opacity-50'>+254 00012345</a>
+              </Link>
+              <Link href='/'>
+                <a className='mb-5 opacity-50'>isaactevin67@gmail.com</a>
+              </Link>
+              <div className='flex items-center'>
+                <div className='mr-10 cursor-pointer'>
+                  <Image
+                    src='/icons/youtube.svg'
+                    width={34}
+                    height={34}
+                    alt='youtube'
+                  />
+                </div>
+                <div className='mr-10 cursor-pointer'>
+                  <Image
+                    src='/icons/discord.svg'
+                    width={28}
+                    height={28}
+                    alt='discord'
+                  />
+                </div>
+                <div className='cursor-pointer'>
+                  <Image
+                    src='/icons/instagram.svg'
+                    width={30}
+                    height={30}
+                    alt='instagram'
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </footer>
-    )
-  }
+      </div>
+      <div className='flex justify-center items-center mb-8'>
+        &copy; <span className='font-bold mr-1'> </span>
+        Design By <span className='font-bold ml-1'>Tevin</span>
+      </div>
+      <div
+        onClick={scrollToTop}
+        className='animate-bounce  h-14 w-14 cursor-pointer shadow-lg shadow-[#671AE4]/40 rounded-full bg-gradient-to-b font-bold from-[#B75CFF] to-[#671AE4] mx-auto flex justify-center items-center'
+      >
+        UP
+      </div>
+    </Container>
+  );
+};
+
+export default Footer;

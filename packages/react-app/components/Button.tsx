@@ -19,8 +19,8 @@ const Button = ({
   }
   if (isLink) {
     return (
-      <Link href={href}>
-        <a className={rootClass + ' ' + className}>{children}</a>
+      <Link href={href} className={rootClass + ' ' + className}>
+        {children}
       </Link>
     );
   }

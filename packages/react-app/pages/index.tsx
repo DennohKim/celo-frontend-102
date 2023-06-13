@@ -25,8 +25,8 @@ export default function Home() {
     <div className='h-full main_bg text-white overflow-hidden' id='top'>
       <Navbar />
       <div>
-        <AddProductModal />
-        <ProductList />
+        {/* <AddProductModal /> */}
+        {/* <ProductList /> */}
     </div>
       <Hero />
       <Sponsor />
@@ -50,7 +50,6 @@ export default function Home() {
         </div>
      
       </Container>
-      <Footer />
  
     </div>
   );

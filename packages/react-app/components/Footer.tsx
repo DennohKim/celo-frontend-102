@@ -14,7 +14,7 @@ const Footer = () => {
         <div className='w-[300px] mb-10 lg:mb-0 mr-10 lg:mr-28'>
           <Logo />
           <p className='mt-5'>
-            The best NFT marketplace platform in the world.Buy,Sell and Mint 
+            The best NFT marketplace platform in the world.Buy,Sell and Mint
             your NFT.
           </p>
         </div>
@@ -22,45 +22,44 @@ const Footer = () => {
           <div>
             <p className='font-bold text-xl mb-5'>About</p>
             <div className='flex flex-col'>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>Product</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                Product
               </Link>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'></a>
+              <Link href='/' className='mb-4 opacity-50'></Link>
+              <Link href='/' className='mb-4 opacity-50'>
+                Term & Condition
               </Link>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>Term & Condition</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                FAQ
               </Link>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>FAQ</a>
-              </Link>
-            </div>Collabos
+            </div>
+            Collabos
           </div>
           <div>
             <p className='font-bold text-xl mb-5'>Company</p>
             <div className='flex flex-col'>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>Our Team</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                Our Team
               </Link>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>Partner With Us</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                Partner With Us
               </Link>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>Privacy & Policy</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                Privacy & Policy
               </Link>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>Features</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                Features
               </Link>
             </div>
           </div>
           <div>
             <p className='font-bold text-xl mb-5'>Contact</p>
             <div className='flex flex-col'>
-              <Link href='/'>
-                <a className='mb-4 opacity-50'>+254 00012345</a>
+              <Link href='/' className='mb-4 opacity-50'>
+                +254 00012345
               </Link>
-              <Link href='/'>
-                <a className='mb-5 opacity-50'>isaactevin67@gmail.com</a>
+              <Link href='/' className='mb-5 opacity-50'>
+                isaactevin67@gmail.com
               </Link>
               <div className='flex items-center'>
                 <div className='mr-10 cursor-pointer'>
